@@ -10,7 +10,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t ecs-demo:testtag .
-      - docker tag ecs-demo-registry:testtag $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ecs-demo-registry:testtag
+      - docker tag ecs-demo:testtag $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ecs-demo-registry:testtag
   post_build:
     commands:
       - echo Build completed on `date`
